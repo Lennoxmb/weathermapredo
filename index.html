@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Report</title>
+    <script src="JS/keys.js"></script>
+    <link rel="stylesheet" href="CSS/resets.css">
+    <link rel="stylesheet" href="CSS/layout.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<div class="page-wrapper">
+    <div id='map' class="mapbox" style='width: 100%; height: 100vh;'></div><!------- << map -->
+    <div class="container coloredTop relative"> <!-- top row -->
+        <div class="row topRow">
+            <!-- search bar-->
+            <form id="searchAddress" class="column justify-center align-center text-center">
+                <label class="buttonLabel" for="setMarker">Enter an address:</label>
+                <input type="text" name="setMarker" id="setMarker" placeholder="Enter Address" ">
+                <button id="setMarkerButton">Search Address</button>
+                <!--          &lt;!&ndash; toggle button&ndash;&gt;-->
+                <!--          <button id="toggleNight" class="relative">Toggle Night Mode</button>-->
+            </form>
+
+
+            <div class="column" id="todaysMoving">
+                <div id="todaysForecastBox" class="row"> <!--- parent to the current day forecast-->
+                    <h2>Today's Forecast</h2>
+                    <div class="column" id="todaysDate"></div>
+                    <div class="column" id="weather"></div>
+                    <div class="column" id="details"></div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- top row end container-->
+
+
+
+    <button id="zoomSubmit"></button> <!--- i need this for my zoom in corner-->
+
+    <div class="container  relative" > <!---- container to the 5 day forecast in js-->
+        <div class="row fivedayForecastBox">
+
+        </div>
+    </div>
+
+</div>
+<script src="JS/mapbox-geocoder-utils.js"></script>
+<script>
+    mapboxgl.accessToken = MAPBOX_API_TOKEN;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v12', // style URL
+        center: [-98.4936300, 29.4241200], // starting position [lng, lat]
+        zoom: 9, // starting zoom
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="JS/main.js"></script>
+</body>
+</html>
