@@ -5,6 +5,7 @@
     <title>Weather Report</title>
     <script src="JS/keys.js"></script>
     <link rel="stylesheet" href="CSS/resets.css">
+
     <link rel="stylesheet" href="CSS/layout.css">
     <link rel="stylesheet" href="CSS/style.css">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
@@ -41,7 +42,9 @@
 
     <button id="zoomSubmit"></button> <!--- i need this for my zoom in corner-->
 
-    <div class="container  relative" > <!---- container to the 5 day forecast in js-->
+    <div class="container relative" Id="fiveDayForecast" > <!---- container to the 5 day forecast in js-->
+        <button onclick="toggleContainer()" id="toggleForecastButton">Toggle Forecast</button>
+        <h2>Five Day Forecast</h2>
         <div class="row fivedayForecastBox">
 
         </div>
