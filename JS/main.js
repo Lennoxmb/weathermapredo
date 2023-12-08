@@ -157,6 +157,11 @@
     weatherForecast('San Antonio, TX')
 
 
+//TOGGLE FORECAST OPEN AND CLOSED
+    function toggleContainer() {
+        let container = document.getElementById('fiveDayForecast');
+        container.classList.toggle('hidden');
+    }
 
 //ZOOM FUNCTION
     document.getElementById("zoomSubmit").addEventListener('click', event => {
