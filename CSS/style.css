@@ -6,7 +6,6 @@
 
 
 #map {
-
     position: absolute;
 }
 
@@ -14,6 +13,14 @@ button {
     background: rgb(23, 0, 56);
     color: white;
     border-radius: 10px;
+}
+
+#toggleForecastButton {
+    z-index: 5;
+}
+
+.hidden {
+    display: none;
 }
 
 .buttonLabel {
