@@ -5,7 +5,6 @@
     <title>Weather Report</title>
     <script src="JS/keys.js"></script>
     <link rel="stylesheet" href="CSS/resets.css">
-
     <link rel="stylesheet" href="CSS/layout.css">
     <link rel="stylesheet" href="CSS/style.css">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
@@ -19,7 +18,7 @@
             <!-- search bar-->
             <form id="searchAddress" class="column justify-center align-center text-center">
                 <label class="buttonLabel" for="setMarker">Enter an address:</label>
-                <input type="text" name="setMarker" id="setMarker" placeholder="Enter Address" ">
+                <input type="text" name="setMarker" id="setMarker" placeholder="Enter Address">
                 <button id="setMarkerButton">Search Address</button>
                 <!--          &lt;!&ndash; toggle button&ndash;&gt;-->
                 <!--          <button id="toggleNight" class="relative">Toggle Night Mode</button>-->
@@ -42,14 +41,12 @@
 
     <button id="zoomSubmit"></button> <!--- i need this for my zoom in corner-->
 
-    <div class="container relative" Id="fiveDayForecast" > <!---- container to the 5 day forecast in js-->
+<footer Id="fiveDayForecast" > <!---- container to the 5 day forecast in js-->
         <button onclick="toggleContainer()" id="toggleForecastButton">Toggle Forecast</button>
-        <h2>Five Day Forecast</h2>
+<!--        <h2>Five Day Forecast</h2>-->
         <div class="row fivedayForecastBox">
-
         </div>
-    </div>
-
+</footer>
 </div>
 <script src="JS/mapbox-geocoder-utils.js"></script>
 <script>
